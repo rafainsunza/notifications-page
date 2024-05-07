@@ -31,7 +31,7 @@ const updateNotificationCount = () => {
     if (notificationCount > 0) {
         notificationCountSpan.innerHTML = notificationCount;
     } else {
-        notificationCountSpan.innerHTML = '';
+        notificationCountSpan.classList.add('no-notification-count');
     }
 }
 
@@ -40,6 +40,12 @@ const markAsRead = (event) => {
 
     if (notification.classList.contains('unread')) {
         notification.classList.remove('unread');
+
+        const unreadBadge = notification.querySelector('.unread-badge');
+
+        if (unreadBadge) {
+            unreadBadge.classList.remove('unread-active');
+        }
     };
 
     updateNotificationCount();
@@ -49,6 +55,12 @@ const markAllAsRead = () => {
     notifications.forEach((notification) => {
         if (notification.classList.contains('unread')) {
             notification.classList.remove('unread');
+
+            const unreadBadge = notification.querySelector('.unread-badge');
+
+            if (unreadBadge) {
+                unreadBadge.classList.remove('unread-active');
+            }
         };
     });
 
