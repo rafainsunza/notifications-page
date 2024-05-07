@@ -1,4 +1,8 @@
 const notifications = document.querySelectorAll('.notification');
+const notificationCountSpan = document.querySelector('.notifications-header-count');
+const markAllAsReadButton = document.querySelector('.mark-all-as-read-button');
+
+let notificationCount = 0;
 
 const setNotificationType = () => {
     notifications.forEach((notification) => {
@@ -21,4 +25,41 @@ const setNotificationType = () => {
     });
 };
 
+const updateNotificationCount = () => {
+    notificationCount = document.querySelectorAll('.unread').length;
+
+    if (notificationCount > 0) {
+        notificationCountSpan.innerHTML = notificationCount;
+    } else {
+        notificationCountSpan.innerHTML = 0;
+    }
+}
+
+const markAsRead = (event) => {
+    const notification = event.target.closest('.notification');
+
+    if (notification.classList.contains('unread')) {
+        notification.classList.remove('unread');
+    };
+
+    updateNotificationCount();
+};
+
+const markAllAsRead = () => {
+    notifications.forEach((notification) => {
+        if (notification.classList.contains('unread')) {
+            notification.classList.remove('unread');
+        };
+    });
+
+    updateNotificationCount();
+};
+
+updateNotificationCount();
 setNotificationType();
+
+notifications.forEach((notification) => {
+    notification.addEventListener('click', markAsRead);
+});
+markAllAsReadButton.addEventListener('click', markAllAsRead);
+
