@@ -31,7 +31,7 @@ const updateNotificationCount = () => {
     if (notificationCount > 0) {
         notificationCountSpan.innerHTML = notificationCount;
     } else {
-        notificationCountSpan.innerHTML = 0;
+        notificationCountSpan.innerHTML = '';
     }
 }
 
