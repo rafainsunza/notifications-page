@@ -100,7 +100,7 @@ main {
   border-radius: 5px;
 }
 
-.notification img {
+.notification-avatar {
   max-width: 45px;
   object-fit: contain;
   align-self: flex-start;
@@ -151,6 +151,11 @@ main {
   cursor: pointer;
 }
 
+.commented-picture-thumbnail {
+  max-width: 45px;
+  object-fit: contain;
+  margin-left: auto;
+}
 .commented-picture-thumbnail:hover {
   cursor: pointer;
 }
