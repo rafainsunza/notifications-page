@@ -30,7 +30,7 @@ html {
 
 .notifications-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .notifications-header-h2 {
@@ -42,11 +42,15 @@ html {
 .notifications-header-count {
   background-color: var(--primary-blue);
   color: var(--white);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: var(--strong);
   padding: 5px 10px;
   margin-left: 5px;
   border-radius: 5px;
+}
+
+.no-notification-count {
+  display: none;
 }
 
 .mark-all-as-read-button {
@@ -106,4 +110,20 @@ html {
   display: block;
   padding: 5px 0;
   color: var(--grayish-blue);
+}
+
+.unread {
+  background-color: var(--lightest-grayish-blue);
+}
+
+.unread-badge {
+  height: 7.5px;
+  width: 7.5px;
+  background-color: var(--primary-red);
+  border-radius: 50%;
+  display: none;
+}
+
+.unread-active {
+  display: inline-block;
 }
