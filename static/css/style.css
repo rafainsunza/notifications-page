@@ -1,0 +1,23 @@
+:root {
+  --primary-red: hsl(1, 90%, 64%);
+  --primary-blue: hsl(219, 85%, 26%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --lightest-grayish-blue: hsl(210, 60%, 98%);
+  --lighter-grayish-blue: hsl(211, 68%, 94%);
+  --light-grayish-blue: hsl(205, 33%, 90%);
+
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --darkest-blue: hsl(224, 21%, 14%);
+
+  --light: 500;
+  --strong: 800;
+}
+
+html {
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  color: var(--dark-grayish-blue);
+}
