@@ -151,12 +151,16 @@ main {
   cursor: pointer;
 }
 
+.thumbnail-container {
+  margin-left: auto;
+}
 .commented-picture-thumbnail {
   max-width: 45px;
   object-fit: contain;
-  margin-left: auto;
 }
 .commented-picture-thumbnail:hover {
+  box-shadow: 0px 0px 2px 2px var(--light-grayish-blue);
+  border-radius: 5px;
   cursor: pointer;
 }
 
