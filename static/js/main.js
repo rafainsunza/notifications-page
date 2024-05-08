@@ -36,34 +36,17 @@ const updateNotificationCount = () => {
 }
 
 const markAsRead = (event) => {
-    const notification = event.target.closest('.notification');
+    const notificationsContainer = event.target.closest('.notification');
 
-    if (notification.classList.contains('unread')) {
-        notification.classList.remove('unread');
-
-        const unreadBadge = notification.querySelector('.unread-badge');
-
-        if (unreadBadge) {
-            unreadBadge.classList.remove('unread-active');
-        }
-    };
-
-    updateNotificationCount();
-};
-
-const markAllAsRead = () => {
-    notifications.forEach((notification) => {
-        if (notification.classList.contains('unread')) {
+    if (notificationsContainer) {
+        notificationsContainer.classList.remove('unread');
+        notificationsContainer.querySelector('.unread-badge').classList.remove('unread-active');
+    } else if (markAllAsReadButton) {
+        notifications.forEach((notification) => {
             notification.classList.remove('unread');
-
-            const unreadBadge = notification.querySelector('.unread-badge');
-
-            if (unreadBadge) {
-                unreadBadge.classList.remove('unread-active');
-            }
-        };
-    });
-
+            notification.querySelector('.unread-badge').classList.remove('unread-active');
+        })
+    }
     updateNotificationCount();
 };
 
@@ -73,5 +56,5 @@ setNotificationType();
 notifications.forEach((notification) => {
     notification.addEventListener('click', markAsRead);
 });
-markAllAsReadButton.addEventListener('click', markAllAsRead);
+markAllAsReadButton.addEventListener('click', markAsRead);
 
