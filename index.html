@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./static/images/favicon-32x32.png"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +24,134 @@
     <title>Frontend Mentor | Notifications page</title>
   </head>
   <body>
+    <main>
+      <div class="notifications-container">
+        <div class="notifications-header">
+          <h2 class="notifications-header-h2">Notifications</h2>
+          <span class="notifications-header-count"></span>
+          <button class="mark-all-as-read-button">Mark all as read</button>
+        </div>
+
+        <div class="notifications-body">
+          <div class="notification post-reaction unread">
+            <img
+              src="./static/images/avatar-mark-webber.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Mark Webber</span>
+              <span class="notification-type"></span>
+              <span class="post-title">My first tournament today!</span>
+              <span class="unread-badge unread-active"></span>
+              <span class="notification-time">1m ago</span>
+            </div>
+          </div>
+
+          <div class="notification follow unread">
+            <img
+              src="./static/images/avatar-angela-gray.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Angela Gray</span>
+              <span class="notification-type"></span>
+              <span class="unread-badge unread-active"></span>
+              <span class="notification-time">5m ago</span>
+            </div>
+          </div>
+
+          <div class="notification group-join unread">
+            <img
+              src="./static/images/avatar-jacob-thompson.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Jacob Thompson</span>
+              <span class="notification-type"></span>
+              <span class="group-title">Chess Club</span>
+              <span class="unread-badge unread-active"></span>
+              <span class="notification-time">1 day ago</span>
+            </div>
+          </div>
+
+          <div class="notification private-message">
+            <img
+              src="./static/images/avatar-rizky-hasanuddin.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Rizky Hasanuddin</span>
+              <span class="notification-type"></span>
+              <span class="unread-badge"></span>
+              <span class="notification-time">5 days ago</span>
+
+              <div class="private-message-content">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </div>
+            </div>
+          </div>
+
+          <div class="notification picture-comment">
+            <img
+              src="./static/images/avatar-kimberly-smith.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Kimberly Smith</span>
+              <span class="notification-type"></span>
+              <span class="unread-badge"></span>
+              <span class="notification-time">1 week ago</span>
+            </div>
+            <div class="thumbnail-container">
+              <img
+                src="./static/images/image-chess.webp"
+                alt="Commented picture thumbnail"
+                class="commented-picture-thumbnail"
+              />
+            </div>
+          </div>
+
+          <div class="notification post-reaction">
+            <img
+              src="./static/images/avatar-nathan-peterson.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Nathan Peterson</span>
+              <span class="notification-type"></span>
+              <span class="post-title"
+                >5 end-game strategies to increase your win rate</span
+              >
+              <span class="unread-badge"></span>
+              <span class="notification-time">2 weeks ago</span>
+            </div>
+          </div>
+
+          <div class="notification group-exit">
+            <img
+              src="./static/images/avatar-anna-kim.webp"
+              alt="User avatar"
+              class="notification-avatar"
+            />
+            <div class="notification-body">
+              <span class="notification-user">Anna Kim</span>
+              <span class="notification-type"></span>
+              <span class="group-title">Chess Club</span>
+              <span class="unread-badge"></span>
+              <span class="notification-time">2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./static/js/main.js"></script>
   </body>
 </html>
